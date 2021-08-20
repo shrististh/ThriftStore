@@ -4,6 +4,8 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.EditText
 import android.widget.Toast
+import com.example.thriftstore.entities.user
+import com.example.thriftstore.repository.userRepository
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
@@ -38,20 +40,20 @@ class signupActivity : AppCompatActivity() {
         return@setOnClickListener
     } else {
         val user =
-            User(fname = fname, lname = lname, username = username, password = password)
+            user(fname = fname, lname = lname, username = username, password = password)
 
         CoroutineScope(Dispatchers.IO).launch {
             try {
-                val repository = UserRepository()
+                val repository = userRepository()
                 val response = repository.registerUser(user)
                 if(response.success == true){
                     withContext(Dispatchers.Main){
-                        Toast.makeText(this@RegisterActivity, "Successfully registered", Toast.LENGTH_SHORT).show()
+                        Toast.makeText(this@signupActivity, "Successfully registered", Toast.LENGTH_SHORT).show()
                     }
                 }
             } catch (ex: Exception) {
                 withContext(Dispatchers.Main) {
-                    Toast.makeText(this@RegisterActivity, ex.toString(), Toast.LENGTH_SHORT)
+                    Toast.makeText(this@signupActivity, ex.toString(), Toast.LENGTH_SHORT)
                         .show()
                 }
             }
