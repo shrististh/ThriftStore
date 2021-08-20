@@ -1,20 +1,18 @@
 package com.example.thriftstore.repository
 
 import com.example.thriftstore.api.apiRequest
+import com.example.thriftstore.api.serviceBuilder
+import com.example.thriftstore.entities.user
 import com.example.thriftstore.response.UserResponse
-import com.example.thriftstore.ui.api.MyApiRequest
-import com.example.thriftstore.ui.api.ServiceBuilder
-import com.example.thriftstore.ui.api.UserAPI
-import com.example.thriftstore.ui.model.User
-import com.example.thriftstore.ui.response.UserResponse
+
 
 class userRepository : MyApiRequest() {
 
     private val userApi =
-        ServiceBuilder.buildService(UserAPI::class.java)
+        serviceBuilder.serviceBuilder(userApi::class.java)
 
     //Register user
-    suspend fun registerUser(user: User): UserResponse {
+    suspend fun registerUser(user: user): UserResponse {
         return apiRequest {
             userApi.registerUser(user)
         }
@@ -26,4 +24,8 @@ class userRepository : MyApiRequest() {
             userApi.login(username, password)
         }
     }
+}
+
+open class MyApiRequest {
+
 }
