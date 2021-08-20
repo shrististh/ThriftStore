@@ -7,6 +7,7 @@ import android.util.Log
 import android.view.View
 import android.widget.Toast
 import com.example.thriftstore.api.serviceBuilder
+import com.example.thriftstore.repository.userRepository
 import com.google.android.material.snackbar.Snackbar
 import com.google.android.material.textfield.TextInputEditText
 import kotlinx.coroutines.CoroutineScope
@@ -36,7 +37,7 @@ class loginActivity : AppCompatActivity() {
 
     CoroutineScope(Dispatchers.IO).launch {
         try {
-            val repository = UserRepository()
+            val repository = userRepository()
             val response = repository.login(username, password)
             if (response.success == true) {
                 // Save token
@@ -45,8 +46,8 @@ class loginActivity : AppCompatActivity() {
                 // saveUsernamePassword()
                 startActivity(
                     Intent(
-                        this@LoginActivity,
-                        DashboardActivity::class.java
+                        this@loginActivity,
+                        dashboardActivity::class.java
                     )
                 )
                 finish()
@@ -69,7 +70,7 @@ class loginActivity : AppCompatActivity() {
                 Log.d("Error", ex.toString())
 
                 Toast.makeText(
-                    this@LoginActivity,
+                    this@loginActivity,
                     ex.toString(),
                     Toast.LENGTH_SHORT
                 ).show()
