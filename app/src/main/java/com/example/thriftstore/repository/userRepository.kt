@@ -1,10 +1,12 @@
 package com.example.thriftstore.repository
 
-import com.example.retrofitstarterbatch26.ui.api.MyApiRequest
-import com.example.retrofitstarterbatch26.ui.api.ServiceBuilder
-import com.example.retrofitstarterbatch26.ui.api.UserAPI
-import com.example.retrofitstarterbatch26.ui.model.User
-import com.example.retrofitstarterbatch26.ui.response.UserResponse
+import com.example.thriftstore.api.apiRequest
+import com.example.thriftstore.response.UserResponse
+import com.example.thriftstore.ui.api.MyApiRequest
+import com.example.thriftstore.ui.api.ServiceBuilder
+import com.example.thriftstore.ui.api.UserAPI
+import com.example.thriftstore.ui.model.User
+import com.example.thriftstore.ui.response.UserResponse
 
 class userRepository : MyApiRequest() {
 
