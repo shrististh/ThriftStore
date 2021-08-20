@@ -20,7 +20,16 @@ class signupActivity : AppCompatActivity() {
 
         etUsername = findViewById(R.id.etUsername)
         etPassword = findViewById(R.id.etPassword)
-    }
+
+
+    btnAddUser.setOnClickListener {
+
+        val fname = etFname.text.toString()
+        val lname = etLname.text.toString()
+        val username = etUsername.text.toString()
+        val password = etPassword.text.toString()
+        val confirmPassword = etConfirmPassword.text.toString()
+
 
 
     if (password != confirmPassword) {
