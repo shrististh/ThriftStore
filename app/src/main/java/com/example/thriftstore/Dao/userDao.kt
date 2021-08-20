@@ -11,6 +11,6 @@ interface UserDAO {
     @Insert
     suspend fun registerUser(user: user)
 
-    @Query("select * from User where username=(:username) and password=(:password)")
+    @Query("select * from user where username=(:username) and password=(:password)")
     suspend fun checkUser(username: String, password: String): user
 }

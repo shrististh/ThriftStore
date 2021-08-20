@@ -35,7 +35,7 @@ abstract class UserDB : RoomDatabase() {
             Room.databaseBuilder(
                 context.applicationContext,
                 UserDB::class.java,
-                "StudentDB"
+                "UserDB"
             ).build()
     }
 }
