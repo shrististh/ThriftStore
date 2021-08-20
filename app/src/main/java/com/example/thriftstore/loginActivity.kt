@@ -6,6 +6,7 @@ import android.os.Bundle
 import android.util.Log
 import android.view.View
 import android.widget.Toast
+import com.example.thriftstore.api.serviceBuilder
 import com.google.android.material.snackbar.Snackbar
 import com.google.android.material.textfield.TextInputEditText
 import kotlinx.coroutines.CoroutineScope
@@ -39,7 +40,7 @@ class loginActivity : AppCompatActivity() {
             val response = repository.login(username, password)
             if (response.success == true) {
                 // Save token
-                ServiceBuilder.token = "Bearer ${response.token}"
+                serviceBuilder.token = "Bearer ${response.token}"
                 //Save username and password in shared preferences
                 // saveUsernamePassword()
                 startActivity(
