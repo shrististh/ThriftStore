@@ -7,6 +7,7 @@ import android.util.Log
 import android.view.View
 import android.widget.Toast
 import com.google.android.material.snackbar.Snackbar
+import com.google.android.material.textfield.TextInputEditText
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
@@ -15,8 +16,16 @@ import java.lang.Exception
 
 class loginActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_login)
+        private lateinit var etUsername: TextInputEditText
+        private lateinit var etPassword: TextInputEditText
+
+        override fun onCreate(savedInstanceState: Bundle?) {
+            super.onCreate(savedInstanceState)
+            setContentView(R.layout.activity_login)
+
+            etUsername = findViewById(R.id.etUsername)
+            etPassword = findViewById(R.id.etPassword)
+
     }
 
     private fun login() {
