@@ -2,6 +2,7 @@ package com.example.thriftstore
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.widget.EditText
 import android.widget.Toast
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
@@ -10,9 +11,15 @@ import kotlinx.coroutines.withContext
 import java.lang.Exception
 
 class signupActivity : AppCompatActivity() {
+
+        private lateinit var etUsername: EditText
+        private lateinit var etPassword: EditText
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_signup)
+
+        etUsername = findViewById(R.id.etUsername)
+        etPassword = findViewById(R.id.etPassword)
     }
 
 
