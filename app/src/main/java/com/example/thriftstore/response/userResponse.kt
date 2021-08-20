@@ -1,6 +1,6 @@
 package com.example.thriftstore.response
 
-class userResponse {
+class UserResponse {
     val success: Boolean? = null,
     val token: String? = null
 
