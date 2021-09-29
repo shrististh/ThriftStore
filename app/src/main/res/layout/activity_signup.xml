@@ -12,7 +12,7 @@
             android:layout_height="110dp"
             android:layout_gravity="center"
             android:layout_marginTop="25dp"
-            android:src="@drawable/thrift" />
+            android:src="@drawable/logo" />
 
         <TextView
             android:layout_width="match_parent"

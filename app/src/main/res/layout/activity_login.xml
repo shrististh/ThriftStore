@@ -15,7 +15,7 @@
         android:layout_column="0"
         android:layout_gravity="center"
         android:layout_marginBottom="1dp"
-        android:src="@drawable/thrift" />
+        android:src="@drawable/logo" />
 
 
 
