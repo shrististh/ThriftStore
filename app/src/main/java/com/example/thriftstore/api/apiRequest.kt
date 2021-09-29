@@ -1,11 +1,12 @@
 package com.example.thriftstore.api
 
+
 import org.json.JSONException
 import org.json.JSONObject
 import retrofit2.Response
 import java.io.IOException
 
-class apiRequest {
+open class apiRequest {
 
     suspend fun <T> apiRequest(call: suspend () -> Response<T>): T {
         val response = call.invoke()
@@ -29,3 +30,4 @@ class apiRequest {
     }
 
 }
+

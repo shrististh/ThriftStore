@@ -19,17 +19,10 @@
             android:layout_height="wrap_content"
             android:gravity="center"
             android:text="Sign up Page"
-            android:textSize="25dp"
-            android:textStyle="bold" />
+            android:textSize="30dp"
+            android:textStyle="bold"
+            android:textColor="@color/cardview_dark_background"/>
 
-        <Button
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="25dp"
-            android:layout_marginTop="20dp"
-            android:layout_marginRight="25dp"
-            android:layout_marginBottom="10dp"
-            android:text="Login With facebook"/>
 
 
         <View
@@ -39,12 +32,12 @@
             android:layout_marginTop="20dp"
             android:layout_marginRight="25dp"
             android:layout_marginBottom="10dp"
-            android:background="#c0c0c0" />
+            android:background="#3C89D0" />
 
 
 
         <EditText
-            android:id="@+id/etFname"
+            android:id="@+id/etFirstname"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginLeft="25dp"
@@ -52,37 +45,10 @@
             android:layout_marginRight="25dp"
             android:layout_marginBottom="10dp"
             android:background="@drawable/circle"
-            android:hint="First Name"
+            android:hint="Email"
             android:inputType="textPersonName"
-            android:padding="10dp" />
-
-
-        <EditText
-            android:id="@+id/etLname"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="25dp"
-            android:layout_marginTop="20dp"
-            android:layout_marginRight="25dp"
-            android:layout_marginBottom="10dp"
-            android:background="@drawable/circle"
-            android:hint="Last Name"
-            android:inputType="textPersonName"
-            android:padding="10dp" />
-
-
-        <EditText
-            android:id="@+id/etUsername"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="25dp"
-            android:layout_marginTop="20dp"
-            android:layout_marginRight="25dp"
-            android:layout_marginBottom="10dp"
-            android:background="@drawable/circle"
-            android:hint="Username"
-            android:inputType="textPersonName"
-            android:padding="10dp" />
+            android:padding="10dp"
+            />
 
 
         <EditText
@@ -98,9 +64,8 @@
             android:inputType="textPassword"
             android:padding="10dp" />
 
-
         <EditText
-            android:id="@+id/etImage"
+            android:id="@+id/etConfirmPassword"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginLeft="25dp"
@@ -108,8 +73,22 @@
             android:layout_marginRight="25dp"
             android:layout_marginBottom="10dp"
             android:background="@drawable/circle"
-            android:hint="Image Url"
-            android:inputType="textPersonName"
+            android:hint="Confirm Password"
+            android:inputType="textPassword"
+            android:padding="10dp" />
+
+
+        <EditText
+            android:id="@+id/etLocation"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="25dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginRight="25dp"
+            android:layout_marginBottom="10dp"
+            android:background="@drawable/circle"
+            android:hint="Location"
+            android:inputType="textPassword"
             android:padding="10dp" />
 
         <Button
@@ -120,26 +99,11 @@
             android:layout_marginTop="20dp"
             android:layout_marginRight="25dp"
             android:layout_marginBottom="10dp"
-            android:backgroundTint="#B2DFFC"
+            android:backgroundTint="#3C89D0"
             android:padding="10dp"
             android:text="Sign Up"
             android:textSize="20sp" />
 
-        <GridLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:columnCount="2"
-            android:orientation="horizontal">
-
-            <Button
-                android:id="@+id/btnLogin"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginRight="100dp"
-                android:text="Log In"
-                android:textColor="#0070BF"
-                android:textSize="15dp" />
-        </GridLayout>
 
 
 

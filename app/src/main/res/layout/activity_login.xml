@@ -53,7 +53,7 @@
         android:layout_marginTop="20dp"
         android:layout_marginRight="25dp"
         android:layout_marginBottom="10dp"
-        android:backgroundTint="#FF3700B3"
+        android:backgroundTint="#3C89D0"
         android:padding="10dp"
         android:text="Log in"
         android:textSize="20sp" />
@@ -116,7 +116,8 @@
             android:layout_height="wrap_content"
             android:layout_marginRight="100dp"
             android:text=" Sign Up"
-            android:textColor="#0070BF"
+            android:textColor="#FFFFFF"
+            android:backgroundTint="#4C9A2A"
             android:textSize="15dp" />
 
 

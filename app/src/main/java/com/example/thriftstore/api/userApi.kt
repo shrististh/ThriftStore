@@ -1,19 +1,19 @@
 package com.example.thriftstore.api
 
-import com.example.retrofitstarterbatch26.ui.model.User
-importcom.example.retrofitstarterbatch26.ui.response.UserResponse
+import com.example.thriftstore.model.user
+import com.example.thriftstore.response.UserResponse
 import retrofit2.Response
 import retrofit2.http.Body
 import retrofit2.http.Field
 import retrofit2.http.FormUrlEncoded
 import retrofit2.http.POST
 
-class userApi {
+interface userApi {
 
     // user api
     @POST("auth/register")
     suspend fun registerUser(
-        @Body user: User
+        @Body user: user
     ): Response<UserResponse>
 
     //Invoke
@@ -23,5 +23,4 @@ class userApi {
         @Field("username") username: String,
         @Field("password") password: String
     ): Response<UserResponse>
-
 }
