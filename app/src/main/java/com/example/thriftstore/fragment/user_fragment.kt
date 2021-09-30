@@ -132,13 +132,13 @@ class user_fragment : Fragment() {
                 try {
 
                     val userRepository = userRepository()
-                    val response = userRepository.uploadImage(body)
-                    if (response.success == true) {
-                        withContext(Dispatchers.Main) {
-                            Toast.makeText(requireContext(), "Uploaded", Toast.LENGTH_SHORT)
-                                .show()
-                        }
-                    }
+//                    val response = userRepository.uploadImage(body)
+//                    if (response.success == true) {
+//                        withContext(Dispatchers.Main) {
+//                            Toast.makeText(requireContext(), "Uploaded", Toast.LENGTH_SHORT)
+//                                .show()
+//                        }
+//                    }
                 } catch (ex: Exception) {
                     withContext(Dispatchers.Main) {
                         Toast.makeText(

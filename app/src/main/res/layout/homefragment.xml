@@ -48,7 +48,7 @@
                         android:id="@+id/imgtray"
                         android:layout_width="80dp"
                         android:layout_height="80dp"
-                        android:src="@drawable/tray"/>
+                        android:src="@drawable/cartlogo"/>
 
                     <TextView
                         android:id="@+id/txttrayname"
@@ -101,7 +101,7 @@
                         android:id="@+id/imglamp"
                         android:layout_width="80dp"
                         android:layout_height="80dp"
-                        android:src="@drawable/lamp"/>
+                        android:src="@drawable/cartlogo"/>
 
                     <TextView
                         android:id="@+id/txtlampname"
@@ -154,7 +154,7 @@
                         android:id="@+id/imgcup"
                         android:layout_width="80dp"
                         android:layout_height="80dp"
-                        android:src="@drawable/cup"/>
+                        android:src="@drawable/cartlogo"/>
 
                     <TextView
                         android:id="@+id/txtcupname"
@@ -207,7 +207,7 @@
                         android:id="@+id/imgvase"
                         android:layout_width="80dp"
                         android:layout_height="80dp"
-                        android:src="@drawable/vase"/>
+                        android:src="@drawable/cartlogo"/>
 
                     <TextView
                         android:id="@+id/txtvasename"
@@ -261,7 +261,7 @@
                         android:id="@+id/imgsweater"
                         android:layout_width="80dp"
                         android:layout_height="80dp"
-                        android:src="@drawable/sweater"/>
+                        android:src="@drawable/cartlogo"/>
 
                     <TextView
                         android:id="@+id/txtsweatername"
@@ -315,7 +315,7 @@
                         android:id="@+id/imgsock"
                         android:layout_width="80dp"
                         android:layout_height="80dp"
-                        android:src="@drawable/socks"/>
+                        android:src="@drawable/cartlogo"/>
 
                     <TextView
                         android:id="@+id/txt3"

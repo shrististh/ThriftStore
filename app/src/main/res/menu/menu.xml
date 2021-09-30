@@ -3,7 +3,7 @@
 
     <item
         android:id="@+id/home"
-        android:icon="@drawable/homelogo"
+        android:icon="@drawable/cartlogo"
         android:title="Home"
         />
 
@@ -15,13 +15,13 @@
 
     <item
         android:id="@+id/map"
-        android:icon="@drawable/maplogo"
+        android:icon="@drawable/cartlogo"
         android:title="Find Us"
         />
 
     <item
         android:id="@+id/user"
-        android:icon="@drawable/profilelogo"
+        android:icon="@drawable/cartlogo"
         android:title="Profile"
         />
 

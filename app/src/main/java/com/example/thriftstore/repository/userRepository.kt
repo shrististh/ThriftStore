@@ -12,24 +12,24 @@ import okhttp3.MultipartBody
     class userRepository : apiRequest() {
 
         private val userApi =
-            serviceBuilder.buildServicer(com.example.thriftstore.api.userApi::class.java)
+            serviceBuilder.buildService(com.example.thriftstore.api.userApi::class.java)
 
 
-        //Register user
+//        Register user
         suspend fun registerUser(data: user): UserResponse {
             return apiRequest {
                 userApi.registerUser(data)
             }
         }
 
-        // Login user
+//         Login user
         suspend fun login(username: String, password: String): UserResponse {
             return apiRequest {
                 userApi.login(username, password)
             }
         }
 
-        suspend fun uploadImage(body : MultipartBody.Part : userResponse){
+        suspend fun uploadImage(body : MultipartBody.Part ): UserResponse{
             return apiRequest{
                 userApi.uploadImage(body)
             }
