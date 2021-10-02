@@ -1,4 +1,4 @@
-package com.example.thriftstore
+package com.example.mainthriftstoreandroid
 
 import android.content.Intent
 import android.os.Bundle

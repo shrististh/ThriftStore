@@ -1,4 +1,4 @@
-package com.example.thriftstore.api
+package com.example.mainthriftstoreandroid.api
 
 import okhttp3.OkHttpClient
 import retrofit2.Retrofit
@@ -7,7 +7,7 @@ import java.util.concurrent.TimeUnit
 
 object serviceBuilder {
 
-    private val BASE_URL = "http://10.0.2.2:3000/api/v1/"
+    const val BASE_URL = "http://10.0.2.2:90/"
     var token: String? = null
 
     var okHttpClient = OkHttpClient.Builder()
@@ -27,5 +27,6 @@ object serviceBuilder {
     fun <T> buildService(serviceType: Class<T>): T {
         return retrofitBuilder.create(serviceType)
     }
-
 }
+
+

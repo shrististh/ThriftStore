@@ -1,6 +1,6 @@
-package com.example.thriftstore.response
+package com.example.mainthriftstoreandroid.response
 
-data class UserResponse (
+class userResponse (
     var success: Boolean? = null,
     var token: String? = null
 )

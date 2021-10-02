@@ -1,26 +1,54 @@
-package com.example.thriftstore.api
+package com.example.mainthriftstoreandroid.api
 
-import com.example.thriftstore.model.user
-import com.example.thriftstore.response.UserResponse
+import com.example.mainthriftstoreandroid.model.user
+import com.example.mainthriftstoreandroid.response.userResponse
+import okhttp3.MultipartBody
+//import okhttp3.Response
 import retrofit2.Response
-import retrofit2.http.Body
-import retrofit2.http.Field
-import retrofit2.http.FormUrlEncoded
-import retrofit2.http.POST
+import retrofit2.Callback
+import retrofit2.http.*
 
 interface userApi {
 
+
     // user api
-    @POST("auth/register")
+    @POST("user/register")
     suspend fun registerUser(
         @Body user: user
-    ): Response<UserResponse>
+    ): Response<userResponse>
+
 
     //Invoke
     @FormUrlEncoded
-    @POST("auth/login")
+    @POST("user/login")
     suspend fun login(
-        @Field("username") username: String,
+        @Field("email") email: String,
         @Field("password") password: String
-    ): Response<UserResponse>
+    ): Response<userResponse>
+
+
+    //retrive User
+    @GET("user/show")
+    suspend fun retrieveUser(
+        @Header("Authorization") token: String,
+    ): Response<userResponse>
+
+
+    //Update Student
+    @PUT("user/update/{id}")
+    suspend fun updateUser(
+        @Header("Authorization") token: String
+    ): Response<userResponse>
+
+
+    @Multipart
+    @PUT("profile/upload/{id}")
+    suspend fun uploadImage(
+
+        @Part image: MultipartBody.Part
+    ): Response<userResponse>
 }
+
+
+
+

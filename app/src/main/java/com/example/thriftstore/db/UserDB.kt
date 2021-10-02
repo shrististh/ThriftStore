@@ -1,11 +1,12 @@
-package com.example.thriftstore.db
+package com.example.mainthriftstoreandroid.db
 
 import android.content.Context
 import androidx.room.Database
 import androidx.room.Room
 import androidx.room.RoomDatabase
-import com.example.thriftstore.Dao.UserDAO
-import com.example.thriftstore.entities.user
+import com.example.mainthriftstoreandroid.model.user
+//import com.example.mainthriftstoreandroid.Dao.UserDAO
+//import com.example.mainthriftstoreandroid.entities.user
 
 
 @Database(
@@ -16,7 +17,7 @@ import com.example.thriftstore.entities.user
 
 
 abstract class UserDB : RoomDatabase() {
-    abstract fun getUserDAO():UserDAO
+//    abstract fun getUserDAO():UserDAO
 
     companion object {
         @Volatile

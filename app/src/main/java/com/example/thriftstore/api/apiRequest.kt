@@ -1,5 +1,4 @@
-package com.example.thriftstore.api
-
+package com.example.mainthriftstoreandroid.api
 
 import org.json.JSONException
 import org.json.JSONObject
@@ -19,6 +18,7 @@ open class apiRequest {
             val message = StringBuilder()
             error?.let {
                 try {
+
                     message.append(JSONObject(it).getString("success"))
                 } catch (e: JSONException) {
                 }
@@ -29,5 +29,5 @@ open class apiRequest {
         }
     }
 
-}
 
+}

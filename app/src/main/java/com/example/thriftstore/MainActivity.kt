@@ -1,4 +1,4 @@
-package com.example.thriftstore
+package com.example.mainthriftstoreandroid
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle

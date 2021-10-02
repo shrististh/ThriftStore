@@ -1,41 +1,77 @@
-package com.example.thriftstore.fragment
+package com.example.mainthriftstoreandroid.fragment
 
 import android.os.Bundle
+import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Button
 import android.widget.SearchView
 import android.widget.TextView
+import android.widget.Toast
 import androidx.fragment.app.Fragment
-import com.example.thriftstore.R
+import androidx.recyclerview.widget.LinearLayoutManager
+import androidx.recyclerview.widget.RecyclerView
+import com.example.mainthriftstoreandroid.R
+import com.example.mainthriftstoreandroid.api.serviceBuilder
+import com.example.mainthriftstoreandroid.entities.product
+import com.example.mainthriftstoreandroid.productadapter
+import com.example.myandroidapplication.repository.ProductRepository
+import kotlinx.coroutines.CoroutineScope
+import kotlinx.coroutines.Dispatchers
+import kotlinx.coroutines.launch
+import kotlinx.coroutines.withContext
 
 class home_fragment : Fragment() {
-    private lateinit var search: SearchView
-    private lateinit var txttrayname: TextView
-    private lateinit var txttrayprice: TextView
-    private lateinit var txtvasename: TextView
-    private lateinit var txtvaseprice: TextView
-    private lateinit var txtsweatername: TextView
-    private lateinit var txtsweaterprice: TextView
-    private lateinit var txtdressname: TextView
-    private lateinit var txtdressprice: TextView
-    private lateinit var txtblazername: TextView
-    private lateinit var txtblazerprice: TextView
-    private lateinit var btndress: Button
-    private lateinit var btnblazer: Button
-    private lateinit var btnshirt: Button
-    private lateinit var btnpant: Button
-    private lateinit var btncap: Button
-    private lateinit var btnwhitedress: Button
+    companion object{
+        var listproduct: ArrayList<product> = ArrayList<product>()
+    }
+
+    private lateinit var recyclerView: RecyclerView
+
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.homefragment, container, false)
+        val view= inflater.inflate(R.layout.activity_dashboard, container, false)
+        recyclerView= view.findViewById(R.id.productRecyclerview)
+
+        getallproducts()
+
+        return view
+    }
 
 
+
+    private fun getallproducts() {
+        listproduct = ArrayList<product>()
+        CoroutineScope(Dispatchers.IO).launch {
+            try{
+                val productRepo = ProductRepository()
+                val response = productRepo.getallproducts(serviceBuilder.token!!)
+                Log.d("response", response.toString())
+                if(response.success==true){
+                    val product = response.data
+                    product?.forEach { item->
+                        listproduct.add(item)
+                    }
+
+                    withContext(Dispatchers.Main){
+                        val adapter = productadapter(listproduct, requireContext())
+                        recyclerView.layoutManager =
+                            LinearLayoutManager(context, LinearLayoutManager.VERTICAL, false)
+                        recyclerView.adapter = adapter
+                    }
+
+                }
+            }catch(ex : Exception){
+                withContext(Dispatchers.Main){
+                    Toast.makeText(activity, ex.toString(), Toast.LENGTH_SHORT).show()
+
+                }
+            }
+        }
     }
 }

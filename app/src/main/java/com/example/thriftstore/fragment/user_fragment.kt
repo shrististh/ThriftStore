@@ -1,4 +1,4 @@
-package com.example.thriftstore.fragment
+package com.example.mainthriftstoreandroid.fragment
 
 import android.app.Activity
 import android.content.Intent
@@ -16,11 +16,9 @@ import android.widget.ImageButton
 import android.widget.ImageView
 import android.widget.Toast
 import androidx.appcompat.widget.PopupMenu
-import androidx.core.app.ActivityCompat.startActivityForResult
-import androidx.core.content.ContentProviderCompat.requireContext
 import androidx.fragment.app.Fragment
-import com.example.thriftstore.R
-import com.example.thriftstore.repository.userRepository
+import com.example.mainthriftstoreandroid.R
+import com.example.mainthriftstoreandroid.repository.userRepository
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
@@ -34,10 +32,10 @@ import java.io.FileOutputStream
 import java.text.SimpleDateFormat
 import java.util.*
 
-
 class user_fragment : Fragment() {
-    private lateinit var userIcon:ImageView
-    private lateinit var imageButton:ImageButton
+
+    private lateinit var userIcon: ImageView
+    private lateinit var imageButton: ImageButton
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -46,7 +44,7 @@ class user_fragment : Fragment() {
         // Inflate the layout for this fragment
         val view=  inflater.inflate(R.layout.userfragment, container, false)
 
-        userIcon = view.findViewById(R.id.usericon)
+        userIcon = view.findViewById(R.id.user_icon)
         imageButton = view.findViewById(R.id.imageButton)
 
 
@@ -177,19 +175,3 @@ class user_fragment : Fragment() {
     }
 
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
