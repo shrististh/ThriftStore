@@ -3,13 +3,23 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
-        <entry key="..\:/Users/Dell/AndroidStudioProjects/ThriftFinalAndroid/app/src/main/res/layout/activity_login.xml" value="0.22" />
-        <entry key="..\:/Users/Dell/AndroidStudioProjects/ThriftFinalAndroid/app/src/main/res/layout/activity_nav.xml" value="0.18" />
-        <entry key="..\:/Users/Dell/AndroidStudioProjects/ThriftFinalAndroid/app/src/main/res/layout/activity_signup.xml" value="0.18" />
+        <entry key="..\:/Users/Dell/AndroidStudioProjects/ThriftFinalAndroid/app/src/main/res/layout/activity_login.xml" value="0.1" />
+        <entry key="..\:/Users/Dell/AndroidStudioProjects/ThriftFinalAndroid/app/src/main/res/layout/activity_main.xml" value="0.1" />
+        <entry key="..\:/Users/Dell/AndroidStudioProjects/ThriftFinalAndroid/app/src/main/res/layout/activity_nav.xml" value="0.1" />
+        <entry key="..\:/Users/Dell/AndroidStudioProjects/ThriftFinalAndroid/app/src/main/res/layout/activity_signup.xml" value="0.1" />
+        <entry key="..\:/Users/Dell/AndroidStudioProjects/ThriftFinalAndroid/app/src/main/res/layout/addtocartfragment.xml" value="0.1" />
+        <entry key="..\:/Users/Dell/AndroidStudioProjects/ThriftFinalAndroid/app/src/main/res/layout/bottomnav.xml" value="0.1" />
+        <entry key="..\:/Users/Dell/AndroidStudioProjects/ThriftFinalAndroid/app/src/main/res/layout/fragment_dashboard.xml" value="0.1" />
+        <entry key="..\:/Users/Dell/AndroidStudioProjects/ThriftFinalAndroid/app/src/main/res/layout/fragment_home.xml" value="0.1" />
+        <entry key="..\:/Users/Dell/AndroidStudioProjects/ThriftFinalAndroid/app/src/main/res/layout/fragment_notifications.xml" value="0.1" />
         <entry key="..\:/Users/Dell/AndroidStudioProjects/ThriftFinalAndroid/app/src/main/res/layout/homefragment.xml" value="0.1" />
+        <entry key="..\:/Users/Dell/AndroidStudioProjects/ThriftFinalAndroid/app/src/main/res/layout/mapfragment.xml" value="0.1" />
+        <entry key="..\:/Users/Dell/AndroidStudioProjects/ThriftFinalAndroid/app/src/main/res/layout/splash_activities.xml" value="0.1" />
         <entry key="..\:/Users/Dell/AndroidStudioProjects/ThriftFinalAndroid/app/src/main/res/layout/userfragment.xml" value="0.1" />
-        <entry key="..\:/Users/Dell/AndroidStudioProjects/ThriftFinalAndroid/app/src/main/res/menu/bottom_nav_menu.xml" value="0.15729166666666666" />
+        <entry key="..\:/Users/Dell/AndroidStudioProjects/ThriftFinalAndroid/app/src/main/res/menu/bottom_nav_menu.xml" value="0.1" />
+        <entry key="..\:/Users/Dell/AndroidStudioProjects/ThriftFinalAndroid/app/src/main/res/menu/gallerymenu.xml" value="0.1" />
         <entry key="..\:/Users/Dell/AndroidStudioProjects/ThriftFinalAndroid/app/src/main/res/menu/menu.xml" value="0.1" />
+        <entry key="..\:/Users/Dell/AndroidStudioProjects/ThriftFinalAndroid/app/src/main/res/menu/menuoption.xml" value="0.1" />
         <entry key="..\:/Users/Dell/AndroidStudioProjects/ThriftStore/app/src/main/res/drawable/button_background.xml" value="0.1859375" />
         <entry key="..\:/Users/Dell/AndroidStudioProjects/ThriftStore/app/src/main/res/drawable/custom_rectangle.xml" value="0.1" />
         <entry key="..\:/Users/Dell/AndroidStudioProjects/ThriftStore/app/src/main/res/layout/activity_dashboard.xml" value="0.18802083333333333" />

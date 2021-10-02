@@ -34,34 +34,34 @@ class loginActivity : AppCompatActivity() {
         CoroutineScope(Dispatchers.IO).launch {
             try {
                 val repository = userRepository()
-//                val response = repository.login(username, password)
-//                if (response.success == true) {
-//                    // Save token
-////                        serviceBuilder.token = "Bearer ${response.token}"
-//                    //Save username and password in shared preferences
-//                    // saveUsernamePassword()
-//                    startActivity(
-//                        Intent(
-//                            this@loginActivity,
-//                            dashboardActivity::class.java
-//                        )
-//                    )
-//                    finish()
-//                } else {
-//                    withContext(Dispatchers.Main) {
-////                            val snack =
-////                                Snackbar.make(
-////                                    linearLayout,
-////                                    "Invalid credentials",
-////                                    Snackbar.LENGTH_LONG
-////                                )
-////                            snack.setAction("OK", View.OnClickListener {
-////                                snack.dismiss()
-////                            })
-////                            snack.show()
-//                        print("abc")
-//                    }
-//                }
+                val response = repository.login(username, password)
+                if (response.success == true) {
+                    // Save token
+//                        serviceBuilder.token = "Bearer ${response.token}"
+                    //Save username and password in shared preferences
+                    // saveUsernamePassword()
+                    startActivity(
+                        Intent(
+                            this@loginActivity,
+                            dashboardActivity::class.java
+                        )
+                    )
+                    finish()
+                } else {
+                    withContext(Dispatchers.Main) {
+//                            val snack =
+//                                Snackbar.make(
+//                                    linearLayout,
+//                                    "Invalid credentials",
+//                                    Snackbar.LENGTH_LONG
+//                                )
+//                            snack.setAction("OK", View.OnClickListener {
+//                                snack.dismiss()
+//                            })
+//                            snack.show()
+                        print("abc")
+                    }
+                }
             } catch (ex: Exception) {
                 withContext(Dispatchers.Main) {
                     Log.d("Error", ex.toString())

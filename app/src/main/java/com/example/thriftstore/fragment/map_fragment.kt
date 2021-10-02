@@ -17,6 +17,4 @@ class map_fragment : Fragment() {
         return inflater.inflate(R.layout.mapfragment, container, false)
     }
 
-
-
 }
